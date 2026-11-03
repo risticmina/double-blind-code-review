@@ -1,0 +1,192 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: #faf9fc;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+h2, h3 {
+  color: #2d2a3d;
+  width: 100%;
+  max-width: 750px;
+}
+
+.opis, .pravila {
+  width: 100%;
+  max-width: 750px;
+  background: white;
+  padding: 14px 20px;
+  border: 1px solid #ece9f7;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  color: #2d2a3d;
+  white-space: pre-line;
+}
+
+.alatke {
+  width: 100%;
+  max-width: 750px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-zeleno {
+  background: #7fd99a;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-zeleno:hover {
+  background: #6bcf88;
+}
+
+.btn-crveno {
+  background: #e88a9a;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-crveno:hover {
+  background: #e0637a;
+}
+
+.kod-prikaz {
+  width: 100%;
+  max-width: 750px;
+  background: #f6f5fa;
+  color: #2d2a3d;
+  border: 1px solid #ece9f7;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  user-select: text;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.kod-prikaz ::selection {
+  background: rgba(139, 127, 242, 0.3);
+}
+
+::ng-deep .oznaceno-zeleno {
+  background: #c5f0d3;
+  border-radius: 3px;
+  padding: 1px 0;
+}
+
+::ng-deep .oznaceno-crveno {
+  background: #f7d3da;
+  border-radius: 3px;
+  padding: 1px 0;
+}
+
+.poruka {
+  color: #e0637a;
+  font-size: 13px;
+}
+
+.lista-oznaka {
+  width: 100%;
+  max-width: 750px;
+  margin-bottom: 16px;
+}
+
+.oznaka-red {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border: 1px solid #ece9f7;
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.tag-zeleno {
+  color: #4ba876;
+  font-weight: 600;
+}
+
+.tag-crveno {
+  color: #c9526a;
+  font-weight: 600;
+}
+
+input[type="number"] {
+  width: 150px;
+  padding: 10px;
+  border: 1.5px solid #ece9f7;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #8b7ff2;
+  box-shadow: 0 0 0 3px rgba(139, 127, 242, 0.15);
+}
+
+.btn-potvrdi {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #8b7ff2, #6d5fd8);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-potvrdi:hover {
+  box-shadow: 0 4px 14px rgba(139, 127, 242, 0.35);
+}
+
+a {
+  color: #6d5fd8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 16px;
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 6px;
+  background: #f3f1fc;
+  transition: background 0.15s;
+}
+
+a:hover {
+  background: #ece9f7;
+}
+
+.btn-ponisti {
+  background: #a8a3bd;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-ponisti:hover {
+  background: #948fb0;
+}

@@ -1,0 +1,15 @@
+
+<div class="brend">
+  <h1>Ocenjivanje koda</h1>
+  <p>Sistem za duplo-slepo recenziranje programskog koda</p>
+</div>
+<hr>
+<h2>Prijava</h2>
+
+Korisničko ime: <input type="text" [(ngModel)]="korIme"><br>
+Lozinka: <input type="password" [(ngModel)]="lozinka"><br>
+<button (click)="login()">Prijavi se</button>
+<span>{{ poruka }}</span>
+
+<hr>
+<a routerLink="/register">Registracija</a>

@@ -1,0 +1,29 @@
+<h2>{{ zadatak.naziv }}</h2>
+
+<div class="opis">{{ zadatak.opis }}</div>
+
+<h3>Rešenje ({{ zadatak.imeFunkcije }})</h3>
+<textarea rows="12" [(ngModel)]="kod" [disabled]="vecPredato"></textarea>
+
+<button (click)="pokreniTestove()" [disabled]="vecPredato">Pokreni testove</button>
+<span class="poruka">{{ poruka }}</span>
+
+@if (testoviPokrenuti) {
+  <h3>Rezultati: {{ brojProslih }} / {{ ukupnoTestova }} prošlo ({{ brojProslih * 20 }} poena)</h3>
+
+  @for (r of rezultati; track $index) {
+    <div class="rezultat" [class.zeleno]="r.prosao" [class.crveno]="!r.prosao">
+      <div><b>Ulaz:</b> {{ r.ulaz | json }}</div>
+      <div><b>Očekivano:</b> {{ r.ocekivaniIzlaz | json }}</div>
+      <div><b>Dobijeno:</b> {{ r.greska ? r.greska : (r.dobijenoIzlaz | json) }}</div>
+    </div>
+  }
+}
+<button (click)="predaj()" [disabled]="vecPredato">Predaj</button>
+<span class="poruka">{{ porukaPredaje }}</span>
+@if (vecPredato) {
+  <a [routerLink]="['/rezultat', zadatak._id]">Vidi rezultat</a>
+}
+
+<br>
+<a routerLink="/pocetna">Nazad</a>

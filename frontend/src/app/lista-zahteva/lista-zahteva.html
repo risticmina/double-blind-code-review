@@ -1,0 +1,15 @@
+<h2>Kodovi za pregled</h2>
+
+@if (lista.length === 0) {
+  <p>Nema kodova za pregled.</p>
+}
+
+@for (stavka of lista; track stavka.recenzijaId) {
+  <div class="red-zadatka">
+    <span>Bazni rezultat: {{ stavka.brojProslihTestova }}/5 ({{ stavka.bazniPoeni }} poena)</span>
+    <a [routerLink]="['/pregled', stavka.recenzijaId]">Pregledaj</a>
+  </div>
+}
+
+<br>
+<a routerLink="/zahtevi">Nazad</a>

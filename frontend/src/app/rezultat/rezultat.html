@@ -1,0 +1,26 @@
+@if (poruka) {
+  <p class="poruka">{{ poruka }}</p>
+}
+
+@if (podaci && !podaci.zavrseno) {
+  <h2>Rezultat još nije spreman</h2>
+  <p>Sačekajte da svi recenzenti završe pregled vašeg rešenja.</p>
+}
+
+@if (podaci && podaci.zavrseno) {
+  <h2>Rezultat</h2>
+  <h3>Finalna ocena: {{ podaci.finalnaOcena }} / 100</h3>
+  <p>Bazni rezultat (automatski testovi): {{ podaci.bazniPoeni }} poena</p>
+
+  <h3>Pregledi recenzenata</h3>
+
+  @for (prikaz of podaci.prikazi; track $index) {
+    <div class="prikaz-kartica">
+      <h4>Recenzija {{ $index + 1 }} ({{ prikaz.dodatiOduzetiPoeni >= 0 ? '+' : '' }}{{ prikaz.dodatiOduzetiPoeni }} poena)</h4>
+      <pre class="kod-prikaz" [innerHTML]="obojenKod(podaci.kod ?? '', prikaz.obojeniDelovi)"></pre>
+    </div>
+  }
+}
+
+<br>
+<a routerLink="/pocetna">Nazad</a>

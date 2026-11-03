@@ -1,0 +1,39 @@
+@if (podaci) {
+  <h2>{{ podaci.zadatak.naziv }}</h2>
+
+  <div class="opis">{{ podaci.zadatak.opis }}</div>
+
+  @if (podaci.zadatak.pravilaOcenjivanja) {
+    <div class="pravila">
+      <b>Pravila ocenjivanja:</b> {{ podaci.zadatak.pravilaOcenjivanja }}
+    </div>
+  }
+
+  <h3>Bazni rezultat: {{ podaci.brojProslihTestova }}/5 ({{ podaci.bazniPoeni }} poena)</h3>
+
+  <h3>Kod</h3>
+  <div class="alatke">
+  @if (!podaci.zavrsena) {
+    <button (mousedown)="$event.preventDefault()" (click)="oznaci('zeleno')" class="btn-zeleno">Označi zeleno (+)</button>
+    <button (mousedown)="$event.preventDefault()" (click)="oznaci('crveno')" class="btn-crveno">Označi crveno (-)</button>
+    @if (obojeniDelovi.length > 0) {
+      <button (mousedown)="$event.preventDefault()" (click)="ukloniOznaku(obojeniDelovi.length - 1)" class="btn-ponisti">Poništi poslednju oznaku</button>
+    }
+  }
+</div>
+
+<pre #kodElement class="kod-prikaz" [innerHTML]="obojeniKodHtml"></pre>
+
+<span class="poruka">{{ poruka }}</span>
+
+<h3>Dodatni/oduzeti poeni</h3>
+@if (podaci.zavrsena) {
+  <p><b>{{ poeniPromena >= 0 ? '+' : '' }}{{ poeniPromena }}</b></p>
+} @else {
+  <input type="number" [(ngModel)]="poeniPromena">
+  <button (click)="potvrdi()" class="btn-potvrdi">Potvrdi</button>
+}
+
+  <br>
+  <a routerLink="/zahtevi">Nazad</a>
+}

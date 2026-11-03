@@ -1,0 +1,13 @@
+.glavni-footer {
+  background: #2d2a3d;
+  color: #b8b3cc;
+  text-align: center;
+  padding: 18px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 13px;
+  margin-top: auto;
+}
+
+.glavni-footer p {
+  margin: 0;
+}

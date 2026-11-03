@@ -1,0 +1,29 @@
+<div class="uvod">
+  <h2>Zdravo, {{ korisnik?.ime }} {{ korisnik?.prezime }}</h2>
+  <p>Pregled dostupnih zadataka</p>
+</div>
+
+<h3>Zadaci</h3>
+
+@for (zadatak of zadaci; track zadatak._id) {
+  <div class="red-zadatka">
+    <span>{{ zadatak.naziv }}</span>
+
+    <div class="akcije">
+      @if (korisnik?.tip === "student") {
+        <a [routerLink]="['/zadatak', zadatak._id]">Reši</a>
+      }
+
+      @if (korisnik?.tip === "profesor") {
+        <button (click)="izmeni(zadatak._id)">Izmeni</button>
+        <button (click)="obrisi(zadatak._id)">Obriši</button>
+      }
+    </div>
+  </div>
+}
+
+@if (korisnik?.tip === "profesor") {
+  <div class="dodaj-zadatak">
+    <a routerLink="/dodaj-zadatak">+ Dodaj zadatak</a>
+  </div>
+}

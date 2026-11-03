@@ -1,0 +1,16 @@
+@if (korisnik) {
+  <header>
+    <div class="logo">Ocenjivanje koda</div>
+
+    <nav>
+      <a routerLink="/pocetna">Početna</a>
+      <a routerLink="/zahtevi">Zahtevi</a>
+      <a routerLink="/pregledani-kodovi">Pregledani kodovi</a>
+      <a routerLink="/moj-profil">Moj profil</a>
+    </nav>
+    <div class="korisnik-info">
+      <span>{{ korisnik.ime }} {{ korisnik.prezime }}</span>
+      <button (click)="odjava()">Odjavi se</button>
+    </div>
+  </header>
+}

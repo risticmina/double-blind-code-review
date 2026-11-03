@@ -1,0 +1,29 @@
+<h2>Izmeni zadatak</h2>
+
+Naziv: <input type="text" [(ngModel)]="naziv"><br>
+Opis:<br>
+<textarea rows="6" [(ngModel)]="opis"></textarea><br>
+Ime funkcije: <input type="text" [(ngModel)]="imeFunkcije"><br>
+Pravila ocenjivanja:<br>
+<textarea rows="4" [(ngModel)]="pravilaOcenjivanja"></textarea><br>
+
+<hr>
+<h3>Testovi</h3>
+
+@for (test of testovi; track $index) {
+  <div class="test-red">
+    <span>Test {{ $index + 1 }}</span>
+    Ulaz (JSON niz, npr. [8, 70]): <input type="text" [(ngModel)]="test.ulaz">
+    Očekivani izlaz (JSON, npr. 600): <input type="text" [(ngModel)]="test.ocekivaniIzlaz">
+    <button (click)="ukloniTest($index)">Ukloni</button>
+  </div>
+}
+
+<button (click)="dodajTest()">Dodaj test</button>
+
+<hr>
+<button (click)="sacuvaj()">Sačuvaj izmene</button>
+<span>{{ poruka }}</span>
+
+<br>
+<a routerLink="/pocetna">Nazad</a>

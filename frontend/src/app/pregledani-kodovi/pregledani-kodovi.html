@@ -1,0 +1,19 @@
+<h2>Pregledani kodovi</h2>
+
+@if (lista.length === 0) {
+  <p>Još uvek niste pregledali nijedan kod.</p>
+}
+
+@for (stavka of lista; track stavka.recenzijaId) {
+  <div class="red-zadatka">
+    <span>
+      {{ stavka.nazivZadatka }} —
+      bazni: {{ stavka.brojProslihTestova }}/5 ({{ stavka.bazniPoeni }}p),
+      vaša ocena: {{ stavka.dodatiOduzetiPoeni >= 0 ? '+' : '' }}{{ stavka.dodatiOduzetiPoeni }}
+    </span>
+    <a [routerLink]="['/pregled', stavka.recenzijaId]">Pogledaj</a>
+  </div>
+}
+
+<br>
+<a routerLink="/pocetna">Nazad</a>

@@ -1,0 +1,20 @@
+<h2>Zahtevi</h2>
+
+@if (zahtevi.length === 0) {
+  <p>Trenutno nema zahteva za pregled.</p>
+}
+
+@for (z of zahtevi; track z.zadatakId) {
+  <div class="red-zadatka">
+    <span>{{ z.naziv }} — {{ z.brojNepregledanih }} </span>
+
+    @if (z.otkljucano) {
+      <a [routerLink]="['/zahtevi', z.zadatakId]">Otvori</a>
+    } @else {
+      <span class="zakljucano">Predajte svoje rešenje da otključate</span>
+    }
+  </div>
+}
+
+<br>
+<a routerLink="/pocetna">Nazad</a>

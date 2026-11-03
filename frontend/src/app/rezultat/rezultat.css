@@ -1,0 +1,86 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: #faf9fc;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+h2, h3 {
+  color: #2d2a3d;
+  width: 100%;
+  max-width: 750px;
+}
+
+p {
+  width: 100%;
+  max-width: 750px;
+  color: #2d2a3d;
+}
+
+.prikaz-kartica {
+  width: 100%;
+  max-width: 750px;
+  background: white;
+  padding: 16px 20px;
+  border: 1px solid #ece9f7;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.prikaz-kartica h4 {
+  margin: 0 0 10px 0;
+  color: #6d5fd8;
+}
+
+.kod-prikaz {
+  background: #f6f5fa;
+  color: #2d2a3d;
+  border: 1px solid #ece9f7;
+  padding: 16px;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.6;
+  margin: 0;
+}
+
+::ng-deep .oznaceno-zeleno {
+  background: #c5f0d3;
+  border-radius: 3px;
+  padding: 1px 0;
+}
+
+::ng-deep .oznaceno-crveno {
+  background: #f7d3da;
+  border-radius: 3px;
+  padding: 1px 0;
+}
+
+.poruka {
+  color: #e0637a;
+  font-size: 13px;
+}
+
+a {
+  color: #6d5fd8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 16px;
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 6px;
+  background: #f3f1fc;
+  transition: background 0.15s;
+}
+
+a:hover {
+  background: #ece9f7;
+}

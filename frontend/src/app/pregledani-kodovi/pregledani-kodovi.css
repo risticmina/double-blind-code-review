@@ -1,0 +1,91 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: #faf9fc;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+h2 {
+  color: #2d2a3d;
+  margin: 0 0 12px 0;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+h3 {
+  color: #2d2a3d;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 0 12px 0;
+  text-align: left;
+}
+
+button {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #8b7ff2, #6d5fd8);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+button:hover {
+  box-shadow: 0 4px 14px rgba(139, 127, 242, 0.35);
+}
+
+hr {
+  width: 100%;
+  max-width: 600px;
+  border: none;
+  border-top: 1px solid #ece9f7;
+  margin: 20px 0;
+}
+
+.red-zadatka {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 14px 20px;
+  margin-bottom: 10px;
+  background: white;
+  border: 1px solid #ece9f7;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #2d2a3d;
+  transition: box-shadow 0.15s, transform 0.1s;
+}
+
+.red-zadatka:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transform: translateY(-1px);
+}
+
+a {
+  color: #6d5fd8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 7px 14px;
+  border-radius: 6px;
+  background: #f3f1fc;
+  transition: background 0.15s;
+}
+
+a:hover {
+  background: #ece9f7;
+  text-decoration: none;
+}
+
+.akcije {
+  display: flex;
+  gap: 10px;
+}

@@ -1,0 +1,130 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 130px);
+  background: #faf9fc;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 48px 20px;
+  box-sizing: border-box;
+}
+
+.uvod {
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.uvod h2 {
+  color: #2d2a3d;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+}
+
+.uvod p {
+  color: #8b87a0;
+  font-size: 15px;
+  margin: 0;
+}
+
+h3 {
+  color: #2d2a3d;
+  width: 100%;
+  max-width: 700px;
+  font-size: 20px;
+  margin: 0 0 16px 0;
+   text-align: center;
+}
+
+.red-zadatka {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  padding: 16px 24px;
+  margin-bottom: 12px;
+  background: white;
+  border: 1px solid #ece9f7;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #2d2a3d;
+  transition: box-shadow 0.15s, transform 0.1s;
+}
+
+.red-zadatka:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transform: translateY(-1px);
+}
+
+.akcije {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.akcije a {
+  color: #6d5fd8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 7px 14px;
+  border-radius: 6px;
+  background: #f3f1fc;
+  transition: background 0.15s;
+}
+
+.akcije a:hover {
+  background: #ece9f7;
+}
+
+.akcije button {
+  padding: 7px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.akcije button:first-of-type {
+  background: #f3f1fc;
+  color: #6d5fd8;
+}
+
+.akcije button:first-of-type:hover {
+  background: #ece9f7;
+}
+
+.akcije button:last-of-type {
+  background: #fdf1f3;
+  color: #e0637a;
+}
+
+.akcije button:last-of-type:hover {
+  background: #fbe4e8;
+}
+
+.dodaj-zadatak {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.dodaj-zadatak a {
+  display: inline-block;
+  color: white;
+  background: linear-gradient(135deg, #8b7ff2, #6d5fd8);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 22px;
+  border-radius: 8px;
+}
+
+.dodaj-zadatak a:hover {
+  box-shadow: 0 4px 14px rgba(139, 127, 242, 0.3);
+}

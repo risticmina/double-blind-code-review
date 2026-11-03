@@ -1,0 +1,23 @@
+<h2>Registracija</h2>
+
+Korisničko ime: <input type="text" [(ngModel)]="kor_ime"><br>
+Lozinka: <input type="password" [(ngModel)]="lozinka"><br>
+Ime: <input type="text" [(ngModel)]="ime"><br>
+Prezime: <input type="text" [(ngModel)]="prezime"><br>
+
+Tip korisnika:
+<select [(ngModel)]="tip">
+  <option value="student">Student</option>
+  <option value="profesor">Profesor</option>
+</select><br>
+
+@if (tip === "student") {
+  Indeks (format GGGG/BBBB): <input type="text" [(ngModel)]="indeks"><br>
+  Prosek: <input type="number" step="0.01" [(ngModel)]="prosek"><br>
+}
+
+<button (click)="register()">Registruj se</button>
+<span>{{ poruka }}</span>
+
+<hr>
+<a routerLink="/login">Nazad na prijavu</a>

@@ -1,0 +1,21 @@
+<h2>Moj profil</h2>
+
+@if (korisnik) {
+  <div class="podaci">
+    <p><b>Korisničko ime:</b> {{ korisnik.kor_ime }}</p>
+    <p><b>Ime i prezime:</b> {{ korisnik.ime }} {{ korisnik.prezime }}</p>
+    <p><b>Tip:</b> {{ korisnik.tip }}</p>
+
+    @if (korisnik.tip === "student") {
+      <p><b>Indeks:</b> {{ korisnik.indeks }}</p>
+
+      <label>Prosek:</label>
+      <input type="number" step="0.01" min="6" max="10" [(ngModel)]="noviProsek">
+      <button (click)="sacuvajProsek()">Sačuvaj prosek</button>
+      <span class="poruka">{{ poruka }}</span>
+    }
+  </div>
+}
+
+<br>
+<a routerLink="/pocetna">Nazad</a>
